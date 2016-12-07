@@ -19,7 +19,7 @@ For more info visit [Sms Alert](https://smsalert.co.in/)
 
 * route : If your operator supports multiple routes then give one route name. Eg: route=1 for promotional, route=4 for transactional SMS.
 
-* dialcode : 0 for international, 91 for India, 1 for USA
+* dialcode : 91 for India
 
 * date & time : when you want to schedule the SMS to be sent. Time format will be yyyy-MM-dd & HH:mm:ss
 
