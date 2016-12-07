@@ -1,0 +1,60 @@
+{
+  "name": "smsAlert-sms",
+  "version": "1.0.1",
+  "description": "A small node.js library for smsAlert sms api",
+  "main": "smsAlert.js",
+  "dependencies": {
+    "request": "^2.65.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scionoftech/smsAlert-sms.git"
+  },
+  "keywords": [
+    "smsAlert",
+    "smsAlert-sms",
+    "sms"
+  ],
+  "files": [
+    "LICENSE",
+    "README.md",
+    "app.js",
+    "smsAlert.js",
+    "image/"
+  ],
+  "author": {
+    "name": "Prashant",
+    "email": "prashant@cozyvision.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/scionoftech/smsAlert-sms/issues"
+  },
+  "homepage": "https://github.com/scionoftech/smsAlert-sms#readme",
+  "_id": "smsAlert-sms@1.0.1",
+  "_shasum": "df2df8301b26afdb5fca7f1f3569eb533e850ac3",
+  "_from": "smsAlert-sms@latest",
+  "_npmVersion": "2.11.3",
+  "_nodeVersion": "0.12.7",
+  "_npmUser": {
+    "name": "Prashant",
+    "email": "prashant@cozyvision.com"
+  },
+  "dist": {
+    "shasum": "df2df8301b26afdb5fca7f1f3569eb533e850ac3",
+    "tarball": "https://registry.npmjs.org/smsAlert-sms/-/smsAlert-sms-1.0.1.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "Prashant",
+      "email": "prashant@cozyvision.com"
+    }
+  ],
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/smsAlert-sms/-/smsAlert-sms-1.0.1.tgz"
+}
