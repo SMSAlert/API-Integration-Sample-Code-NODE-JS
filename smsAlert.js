@@ -6,16 +6,16 @@ function callBack(resultMsg) {
 }
 
 //send message to only one number
-module.exports.sendOne=function(authkey,number,message,senderid,route,dialcode,callback)
+module.exports.sendOne=function(apikey,number,message,senderid,route)
 {
-    var url='http://www.smsalert.co.in/api/push.json?apikey='+authkey+'&route='+route+'&sender='+senderid+'&mobileno='+number+'&text='+message;
+    var url='http://www.smsalert.co.in/api/push.json?apikey='+apikey+'&route='+route+'&sender='+senderid+'&mobileno='+number+'&text='+message;
 	
 	var encodeurl=encodeURI(url);
 	request(encodeurl, function (error, response, body) {
 		var bodyResult = JSON.parse(body);
 	    var resultMsg=bodyResult.status;
 		//check for error
-		CheckSmsError(resultMsg,callback,body,function(response){
+		CheckSmsError(resultMsg,function(response){
 		  // callback1(resultMsg);
 		});
 	});
@@ -24,7 +24,7 @@ module.exports.sendOne=function(authkey,number,message,senderid,route,dialcode,c
 
 
 //check for error response
-function CheckSmsError(resultMsg,callback,body)
+function CheckSmsError(resultMsg)
 {
    switch(resultMsg)
 	{
