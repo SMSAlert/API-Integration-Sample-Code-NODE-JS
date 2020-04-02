@@ -1,63 +1,28 @@
-[smsAlert](https://www.npmjs.com/package/smsAlert)
+# Smsalert Node JS SMS Send
 
-A small [node.js](http://nodejs.org) library for smsAlert sms api.
+Node JS client module to send SMS messages using SMS Alert Gateway.
 
-For more info visit [Sms Alert](https://smsalert.co.in/)
+To use this library, you must have a valid account on https://www.smsalert.co.in.
 
-## Requirements 
+For any questions, please contact us at support@cozyvision.com
 
-* apikey : Api Key(This key is unique for every user)
-
-* number : single mobile number (Keep number in international format)
-
-* message : Message Content to send
-
-* senderid : Receiver will see this as sender's ID
-
-* route : If your operator supports multiple routes then give one route name
-
-* senderno : Sender Mobile No
-
-## Installation
+# Installation
 
 ```bash
-$ npm install smsAlert
+$ npm install smsalert
+```
+
+# Send a message
+
+```js
+    const SMS = require('smsalert');
+    const sms = new SMS(username, password);
+	const resultMessage = sms.send(to, message,senderid);
+    core.debug('SMS sent!');
+	core.debug(resultMessage.description);
 ```
 
 
-## How to use
+# More info
 
-### Text SMS
-
-#### Send sms
-  ```js
-
-var smsAlert=require('./smsAlert.js');
-
-//Authentication Key / Api Key
-var apikey='';
-
-//for number
-var number='';
-
-//message
-var message='';
-
-//Sender ID
-var senderid='';
-
-//Route
-var route='';
-
-
-//send to single number
-
-smsAlert.sendOne(apikey,number,message,senderid,route,function(response){
-
-//Returns Message Response, If Sent Successfully or the appropriate Error Message
-console.log(response);
-});
-
-## License
-
-  [CVT](LICENSE)
+You can check out our website https://www.smsalert.co.in
