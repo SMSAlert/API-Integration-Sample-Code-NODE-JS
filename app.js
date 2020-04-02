@@ -11,7 +11,6 @@ var message='';
 
 //Sender ID
 var senderid='';
-
 //Route
 var route='';
 
