@@ -17,9 +17,9 @@ $ npm install smsalert
 ```js
     const SMS = require('smsalert');
     const sms = new SMS(username, password);
-	const resultMessage = sms.send(to, message,senderid);
-    core.debug('SMS sent!');
-	core.debug(resultMessage.description);
+	const resultMessage = sms.send(to, message,senderid).then((responseMessage) => {
+    console.log(responseMessage);
+    });
 ```
 
 
