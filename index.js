@@ -21,17 +21,20 @@ class SMS {  // Main class
 
   // send sms message
   async send(phoneNumbers, text, senderid) {
-   
+
     if (!text || typeof text != 'string') {
       throw new TypeError('Second argument text is required, it must be string')
     }
-	 
+
     try {
       const response = await request({
         method: 'GET',
-        uri: 'https://www.smsalert.co.in/api/push.json?user='+this.user+'&pwd='+this.pwd+'&sender='+senderid+'&mobileno='+phoneNumbers+'&text='+text,
+        uri: 'https://www.smsalert.co.in/api/push.json?user=' + this.user + '&pwd=' + this.pwd + '&sender=' + senderid + '&mobileno=' + phoneNumbers + '&text=' + text,
         json: true
-      })
+      }).then((value) => {
+        console.log(value);
+        return value;
+      });
       return response
     } catch (err) {
       throw err
